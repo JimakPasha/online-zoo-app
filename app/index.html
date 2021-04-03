@@ -1,14 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
 
-  
+<body class="body">
+
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">
+        Online Zoo
+      </h1>
+      <div class="header__inner">
+        <a class="header__logo logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <span class="menu__link--active">
+                About
+              </span>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Мар
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Zoos
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Contact us
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Design
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="watch-online">
+      <div class="container">
+        <div class="watch-online__inner">
+          <h2 class="watch-online__title">
+            Watch your
+            favorite animal ONLINE
+          </h2>
+          <a class="watch-online__link" href="#">
+            <span></span>Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h3 class="about__title title">
+        How it works
+      </h3>
+      <ul class="about__images-list">
+        <li class="about__images-item">
+          <img class="about__img" src="images/eagle.jpg" alt="eagle">
+        </li>
+        <li class="about__images-item">
+          <img class="about__img" src="images/tiger.jpg" alt="tiger">
+        </li>
+        <li class="about__images-item">
+          <img class="about__img" src="images/panda.jpg" alt="panda">
+        </li>
+        <li class="about__images-item">
+          <img class="about__img" src="images/monkey.jpg" alt="monkey">
+        </li>
+        <li class="about__images-item">
+          <img class="about__img" src="images/elephant.jpg" alt="elephant">
+        </li>
+      </ul>
+      <div class="about__text">
+        <p class="about__text-item">
+          The application Оnline zoo will allow you to watch zoos' and nature reserves' inhabitants in live. Currently,
+          under
+          video-surveillance are pandas in China, eagles on Catalina Island (USA), alligators in Florida and gorillas in
+          the
+          Congo. We are expanding our capabilities and soon online you will meet Arctic snowy owl in Alaska, Penguin in
+          California, Elephant from South Africa and Polar bear from Canada. You will see unique video-shots at any time
+          of the
+          day. If you liked a pet you watch and you want to please it with a delicious treat, you can pay a donation and
+          the
+          animal will receive a surprise from you during feeding hours.
+        </p>
+        <p class="about__text-item">
+          We want to thank you for helping the animals and give you <a class="about__text-link" href="#">discount
+            coupons</a> from
+          our partners.
+        </p>
+      </div>
+    </section>
+
+    <section class="pets">
+      <div class="container">
+        <h3 class="title">
+          Pets in zoo
+        </h3>
+        <div class="pets__inner">
+          <button class="pets__btn pets__btn-prev">
+            <img class="arrow" src="images/icons/arrow-prev.svg" alt="arrow">
+          </button>
+          <button class="pets__btn pets__btn-next">
+            <img class="arrow" src="images/icons/arrow-next.svg" alt="arrow">
+          </button>
+          <a class="pets__item" href="#">
+            <span class="pets__item-text">Panda, China</span>
+            <img class="pets__img" src="images/panda-china.jpg" alt="panda">
+          </a>
+          <a class="pets__item" href="#">
+            <span class="pets__item-text">Alligator, USA</span>
+            <img class="pets__img" src="images/alligator-usa.jpg" alt="alligator">
+          </a>
+          <a class="pets__item" href="#">
+            <span class="pets__item-text">Gorilla, Eastern DRC</span>
+            <img class="pets__img" src="images/gorilla-easten-drc.jpg" alt="gorilla">
+          </a>
+          <a class="pets__item" href="#">
+            <span class="pets__item-text">Elephant, South Africa</span>
+            <img class="pets__img" src="images/elephant-south-africa.jpg" alt="elephant">
+          </a>
+          <a class="pets__item" href="#">
+            <span class="pets__item-text">Polar bear, Canada</span>
+            <img class="pets__img" src="images/polar-bear-canada.jpg" alt="polar-bear">
+          </a>
+          <a class="pets__item" href="#">
+            <span class="pets__item-text">Bald eagle, USA</span>
+            <img class="pets__img" src="images/bald-eagle-usa.jpg" alt="bald-eagle">
+          </a>
+          <a class="pets__item" href="#">
+            <span class="pets__item-text">Arctic snowy owl, Alaska</span>
+            <img class="pets__img" src="images/artic-snowy-owl-alaska.jpg" alt="artic-snowy-owl">
+          </a>
+          <a class="pets__item" href="#">
+            <span class="pets__item-text">Penguin, USA</span>
+            <img class="pets__img" src="images/penguin-usa.jpg" alt="penguin">
+          </a>
+        </div>
+        <a class="pets__link" href="#">
+          Choose your favorite
+        </a>
+      </div>
+    </section>
+
+    <section class="pay">
+      <div class="container">
+        <h3 class="title">
+          Pay and feed
+        </h3>
+        <div class="pay__inner">
+          <div class="pay__item">
+            <img class="pay__icon" src="" alt="cart">
+            <p class="pay__text">
+              You can pay for a donation to any animal using your Credit/Debit card
+            </p>
+          </div>
+          <div class="pay__item">
+            <img class="pay__icon" src="" alt="donations">
+            <p class="pay__text">
+              Donations will go to the account of the zoo or nature reserve
+            </p>
+          </div>
+          <div class="pay__item">
+            <img class="pay__icon" src="" alt="animal">
+            <p class="pay__text">
+              The animal will receive a delicious treat during feeding hours
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="conteiner">
+        <h3 class="title">
+          Testimonials
+        </h3>
+        <div class="testimonials__items">
+          <div class="testimonials__item">
+            <div class="testimonials__item-top">
+              <img class="testimonials__avatar" src="" alt="avatar">
+              <div class="testimonials__name-info">
+                <p class="testimonials__name">
+                  Karen Maitland
+                </p>
+                <p class="testimonials__donate">
+                  +$10
+                </p>
+              </div>
+              <p class="testimonials__text">
+                "Thank you so much for these wonderful live webcams of the eagles on Catalina Island. Being able to watch them in their
+                natural habitat as opposed to zoos is so wonderful. I cannot see myself ever being able to come up there to see them in
+                person, so this is a great substitute. Thank you again."
+              </p>
+
+            </div>
+          </div>
+        </div>
+        <a class="testimonials__link" href="#">
+          
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+
+  </footer>
+
   <script src="js/main.min.js"></script>
 </body>
+
 </html>

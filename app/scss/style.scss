@@ -3,6 +3,147 @@
 @import 'reset';
 @import 'global';
 
+.header{
+	padding-top: 12px;
+	margin-bottom: -69px;
+	z-index: 1;
+	&__title{
+		position: absolute;
+    transform: translateX(-200%);
+		color: transparent;
+	}
+	&__inner{
+		display: flex;
+		align-items: center;
+	}
+}
+
+.logo{
+	margin-right: 57px;
+}
+
+.menu{
+	&__list{
+		display: flex;
+	}
+	&__item{
+		margin-right: 35px;
+	}
+	&__item:last-child{
+		margin-right: 0;
+	}
+	&__link{
+		font-size: 18px;
+		transition: all .3s;
+		outline: none;
+		&:hover,
+		&:focus{
+			text-shadow: 1px 1px 1px $accent;
+		}
+		&--active{
+			font-size: 18px;
+			text-shadow: 1px 1px 1px $accent;
+		}
+	}
+}
+
+.watch-online{
+	background: url(../images/header-bg.jpg) center center/cover no-repeat;
+	padding-top: 210px;
+	padding-bottom: 137px;
+	&__title{
+		max-width: 570px;
+		font-size: 70px;
+		line-height: 84px;
+		margin-bottom: 50px;
+	}
+	&__link{
+		@extend %btn;
+		width: 233px;
+	}
+}
+
+.about{
+	padding-bottom: 100px;
+  &__title{
+    padding-bottom: 29px;
+  }
+	&__images-list{
+    background: url(../images/about-bg.svg) center center/contain no-repeat;
+    padding: 99px 0;
+		display: flex;
+		justify-content: center;
+	}
+	&__img{
+		width: 250px;
+		height: 350px;
+	}
+	&__text{
+		text-align: center;
+		max-width: 933px;
+		margin: 32px auto 0;
+	}
+	&__text-link{
+		text-decoration: underline;
+		color: #267BDE;
+	}
+}
+
+.pets{
+	padding-bottom: 129px;
+	&__inner{
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 20px;
+		row-gap: 30px;
+		padding: 0 83px 50px;
+		position: relative;
+	}
+	&__btn{
+    @extend %btn-arrow;
+	}
+	&__btn-prev{
+    left: 0;
+	}
+	&__btn-next{
+    right: 0;
+	}
+	&__item{
+		position: relative;
+    transition: all .4s;
+    outline: none;
+    &:hover,
+    &:focus{
+      transform: scale(1.08,1.06);
+		  box-shadow: 3px 3px 5px rgba(0,0,0,.8);
+    }
+    &:active{
+      box-shadow: 0px 0px 0px rgba(0,0,0,.8);
+      transform: scale(0.98);
+	  }
+	}
+	&__item-text{
+		position: absolute;
+		top: 15px;
+		left: 50%;
+		transform: translateX(-50%);
+		line-height: 19px;
+		color: #fff;
+		white-space: nowrap
+	}
+	&__link{
+		@extend %btn;
+		width: 286px;
+		margin: 0 auto;
+	}
+}
+
+.pay{
+  &__inner{
+    display: flex;
+    justify-content: center;
+  }
+}
 
 
 @import 'media';
