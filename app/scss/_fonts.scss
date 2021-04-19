@@ -27,3 +27,13 @@
   url('../fonts/Scene-W01-Black.woff') format('woff');
   font-display: swap;
 }
+
+@font-face{
+  font-family: 'BebasNeue-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: local('BebasNeue-Bold'),
+  url('../fonts/BebasNeue-Bold.woff2') format('woff2'),
+  url('../fonts/BebasNeue-Bold.woff') format('woff');
+  font-display: swap;
+}

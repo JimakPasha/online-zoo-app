@@ -1,5 +1,11 @@
-// alert('Приветствую добрый человек, не мог бы ты проверить мою работу завтра 07.04.21, пожалуйста! Не успел доделать, если что мой ник в дискорде @JimakPasha. Спасибо за понимание, плюс тебе в карму :)))')
+'use strict';
 
-// alert('ну пажаааалуйста')
-
-// alert('СпасибО!))')
+const menuBtn = document.querySelector('.menu__btn');
+if(menuBtn) {
+	const menuList = document.querySelector('.menu__list');
+	menuBtn.addEventListener('click', function(e) {
+		document.body.classList.toggle('lock');
+		this.classList.toggle('active');
+		menuList.classList.toggle('active');
+	});
+}
