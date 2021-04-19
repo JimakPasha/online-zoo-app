@@ -1,0 +1,619 @@
+@media (max-width: 1200px) {
+	.aside{
+		display: none;
+	}
+	.animal{
+		&__aside-btn{
+			display: block;
+			padding: 0;
+    	position: fixed;
+			z-index: 100;
+    	top: 287px;
+			left: 20px;
+    	width: 45px;
+    	height: 45px;
+    	border-radius: 50%;
+			display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	background: #ffe68e;
+    	border: none;
+    	cursor: pointer;
+    	transition: all .4s;
+    	outline: none;
+			&:hover{
+				box-shadow: 3px 3px 5px rgba(0,0,0,.8);
+				transform: scale(1.01);
+			}
+			&:active{
+				box-shadow: 0px 0px 0px rgba(0,0,0,.8);
+				border: 1px solid rgba(0,0,0,.2);
+				transform: scale(.96);
+			}
+			&:focus{
+				border: 1px solid rgba(0,0,0,.2);
+			}
+			.arrow{
+				transform: rotate(-90deg);
+			}
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.pets{
+		&__inner{
+			justify-content: center;
+			padding-bottom: 144px;
+		}
+		&__item:nth-child(4n){
+			display: none;
+		}
+		&__btn{
+			top: 85%;
+		}
+		&__btn-prev{
+			left: 43%;
+		}
+		&__btn-next{
+			left: 51%;
+		}
+	}
+	.pay{
+		&__decor-arrow-2{
+			right: -115px;
+		}
+		&__decor-arrow-1{
+			right: -140px;
+		}
+	}
+	.testimonials{
+		&__items{
+			margin-bottom: 144px;
+		}
+		&__btn{
+			top: 107%;
+		}
+		&__btn-prev{
+			left: 43%;
+		}
+		&__btn-next{
+			left: 51%;
+		}
+	}
+	.footer{
+		&__logo,
+		&__btn,
+		&__logo-rsschool,
+		&__logo-yemdigital,
+		&__copy,
+		&__menu{
+			margin-right: 20px;
+		}
+		&__social-list{
+			padding-right: 20px;
+		}
+	}
+	.animal{
+		&__video-small{
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	.animal-info{
+		&__bottom{
+			flex-direction: column;
+		}
+		&__bottom-item{
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 950px) { 
+	.pets{
+		&__inner{
+			padding: 0 0 144px;
+		}
+		&__btn-prev{
+			left: 41%;
+		}
+		&__btn-next{
+			left: 53%;
+		}
+	}
+	.pay{
+		&__decor-arrow-1{
+			right: -130px;
+		}
+		&__decor-arrow-2{
+			right: -90px;
+		}
+	}
+	.testimonials{
+		&__item:last-child{
+			display: none;
+		}
+		&__btn-prev{
+			left: 41%;
+		}
+		&__btn-next{
+			left: 53%;
+		}
+	}
+}
+
+@media (max-width: 790px) {
+	.pets{
+		&__img{
+			max-width: 186px;
+			object-fit: cover;
+		}
+		&__btn-prev{
+			left: 39%;
+		}
+		&__btn-next{
+			left: 51%;
+		}
+	}
+	.pay{
+		&__inner{
+			flex-wrap: wrap;
+		}
+		&__item{
+			width: 50%;
+		}
+		&__decor-arrow-2{
+			display: none;
+		}
+		&__decor-arrow-3{
+			display: block;
+			position: absolute;
+    	bottom: -119px;
+    	right: -19px;
+		}
+		&__text{
+			max-width: 205px;
+			margin: 0 auto;
+		}
+	}
+	.testimonials{
+		&__btn-prev{
+			left: 39%;
+		}
+		&__btn-next{
+			left: 51%;
+		}		
+	}
+	.error{
+		&__img{
+			padding-top: 109px;
+			max-width: 550px;
+			margin-bottom: 28px;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.watch-online{
+		padding-top: 160px;
+		padding-bottom: 269px;
+		&__title{
+			max-width: 414px;
+			font-size: 50px;
+			line-height: 60px;
+		}
+	}
+	.about{
+		&__images-list{
+			padding: 76px 0;
+		}
+		&__text{
+			max-width: 556px;
+		}
+	}
+	.pets{
+		padding-bottom: 100px;
+		&__btn-prev{
+			left: 37%;
+		}
+		&__btn-next{
+			left: 53%;
+		}
+	}
+	.testimonials{
+		&__btn-prev{
+			left: 37%;
+		}
+		&__btn-next{
+			left: 53%;
+		}
+	}
+	.footer{
+		&__menu{
+			margin-bottom: 50px;
+		}
+		&__btn{
+			margin-bottom: 50px;
+		}
+		&__logo-rsschool,
+		&__logo-yemdigital{
+			margin-bottom: 50px;
+		}
+		&__inner{
+			justify-content: space-between;
+			row-gap: 0px;
+		}
+		&__btn{
+			order: 1;
+			margin-bottom: 50px;
+		}
+		&__copy{
+			order: 3;
+			width: 100%;
+			text-align: center;
+		}
+		&__author-design{
+			order: 2;
+			width: 100%;
+			margin-bottom: 10px;
+			text-align: center;
+			margin-right: 0;
+		}
+	}
+	.animal{
+		&__online{
+			height: 338px;
+		}
+		&__video-small{
+			flex-wrap: wrap;
+		}
+		&__video-small-wrapper{
+			width: 48%;
+			height: 167px;
+		}
+	}
+	.animal-info{
+		&__top{
+			flex-direction: column;
+		}
+		&__top-item{
+			width: 100%;
+			padding-bottom: 8px;
+		}
+		&__top-item:last-child{
+			padding-top: 8px;
+			margin-top: -1px;
+			padding-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 639px) {
+	.pets{
+		&__item:nth-child(2n){
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 635px) {
+	.body.lock{
+		overflow: hidden;
+	}
+	.menu{
+		&__btn{
+			border: 0;
+			padding: 0;
+			background-color: transparent;
+			display: block;
+			position: absolute;
+    	right: 10px;
+    	top: 28px;
+			z-index: 5;
+			width: 36px;
+			height: 22px;
+			cursor: pointer;
+			outline: none;
+			&:active{
+				transform: scale(0.95);
+			}
+			&::before,
+			&::after,
+			& span{
+				width: 100%;
+				height: 2px;
+				position: absolute;
+				background-color: #000;
+				border-radius: 2px;
+				left: 0;
+				transition: all .3s;
+			}
+			&::before,
+			&::after{
+				content: '';
+			}
+			&::before{
+				top: 0;
+			}
+			&::after{
+				bottom: 0;
+			}
+			& span{
+				top: 50%;
+				transform: scale(1) translateY(-50%);
+			}
+		}
+		&__btn.active{
+			span{
+				transform: scale(0);
+			}
+			&::before{
+				top: 50%;
+				transform: rotate(-45deg) translateY(-50%);
+			}
+			&::after{
+				bottom: 50%;
+				transform: rotate(45deg) translateY(50%);
+			}
+		}
+		&__list{
+			overflow: auto;
+			position: fixed;
+			display: block;
+			margin-bottom: 20px;
+			top: -100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $bg;
+			padding: 40px 60px 40px 30px;
+			transition: top .3s ease 0s;
+		}
+		&__list.active{
+			top: 0;
+		}
+		&__item{
+			margin-right: 0px;
+			margin-bottom: 20px;
+		}
+		&__item:last-child{
+			margin-bottom: 0;
+		}
+		&__link{
+			font-size: 22px;
+			line-height: 29px;
+		}
+	}
+	.pets{
+		padding-bottom: 100px;
+		&__btn-prev{
+			left: 36%;
+		}
+		&__btn-next{
+			left: 52%;
+		}
+	}
+	.pay{
+		&__decor-arrow-1{
+			top: -85px;
+		}
+	}
+	.testimonials{
+		&__btn-prev{
+			left: 36%;
+		}
+		&__btn-next{
+			left: 52%;
+		}
+	}
+	.testimonials{
+		&__item:nth-child(3){
+			display: none;
+		}
+	}
+	.animal{
+		&__video-small-wrapper{
+			width: 46%;
+		}
+	}
+	.error{
+		&__img{
+			padding-top: 136px;
+			max-width: 260px;
+			margin-bottom: 15px;
+		}
+		&__text{
+			font-size: 40px;
+			line-height: 40px;
+		}
+		&__link-home{
+			font-size: 16px;
+			line-height: 16px;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.pets{
+		&__item-text{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		&__img{
+			max-width: 140px;
+		}
+		&__btn-prev{
+			left: 33%;
+		}
+		&__btn-next{
+			left: 53%;
+		}
+	}
+	.pay{
+		&__inner{
+			flex-direction: column;
+		}
+		&__item{
+			width: 100%;
+			margin-bottom: 80px;
+		}
+		&__item:last-child{
+			margin-bottom: 0;
+		}
+		&__decor-arrow-1,
+		&__decor-arrow-3{
+			display: none;
+		}
+		&__decor-arrow-mobile-1,
+		&__decor-arrow-mobile-2{
+			display: block;
+			position: absolute;
+    	bottom: -93px;
+    	right: 50%;
+			transform: translateX(50%);
+		}
+	}
+	.testimonials{
+		&__items{
+			flex-direction: column;
+			margin-bottom: 124px;
+		}
+		&__item{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		&__btn{
+			top: 102%;
+		}
+		&__btn-prev{
+			left: 33%;
+		}
+		&__btn-next{
+			left: 53%;
+		}
+	}
+	.footer{
+		&__inner{
+			justify-content: center;
+		}
+		&__logo,
+		&__btn,
+		&__logo-yemdigital,
+		&__copy,
+		&__menu{
+			margin-bottom: 50px;
+			margin-right: 0;
+		}
+		&__social-list{
+			padding-bottom: 50px;
+		}
+		&__copy{
+			max-width: 210px;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.container{
+		padding: 0 10px;
+	}
+	.watch-online{
+		padding-bottom: 149px;
+		background-position: 54% 50%;
+	}
+	.about{
+		&__images-list{
+			overflow: visible;
+			flex-wrap: wrap;
+			padding: 51px 0;
+		}
+		&__images-item:last-child{
+			display: none;
+		}
+		&__images-item:nth-child(even){
+			transform: scale(1);
+		}
+		&__images-item:nth-child(3){
+			transform: scale(1);
+		}
+		&__images-item:nth-child(1){
+			transform: scaleX(0.88) translate(-30px, 35px);
+			z-index: 2;
+		}
+		&__images-item:nth-child(3){
+			transform: scaleX(0.88) translate(30px, -35px);
+		}
+			&__images-item:nth-child(1){
+				order: 1;
+			}
+			&__images-item:nth-child(2){
+				order: 0;
+			}
+			&__images-item:nth-child(3){
+				order: 2;
+			}
+			&__images-item:nth-child(4){
+				order: 3;
+			}
+		&__img{
+			width: 160px;
+			height: 215px;
+		}
+		&__text{
+			margin: 29px auto 0;
+		}
+	}
+	.pets{
+		&__btn-prev{
+			left: 26%;
+		}
+		&__btn-next{
+			left: 52%;
+		}
+	}
+	.testimonials{
+		&__btn-prev{
+			left: 26%;
+		}
+		&__btn-next{
+			left: 52%;
+		}
+	}
+	.animal{
+		&__online{
+			height: 169px;
+		}
+		&__feed-btn{
+			margin-bottom: 20px;
+			display: block;
+			height: 51px;
+			font-size: 18px;
+			line-height: 1;
+			border: none;
+			background-color: $accent;
+			border-radius: 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			outline: none;
+			transition: all .4s;
+			&:hover{
+				box-shadow: 3px 3px 5px rgba(0,0,0,.8);
+				transform: scale(1.01);
+			}
+			&:active{
+				box-shadow: 0px 0px 0px rgba(0,0,0,.8);
+				border: 1px solid rgba(0,0,0,.2);
+				transform: scale(.96);
+			}
+			&:focus{
+				border: 1px solid rgba(0,0,0,.6);
+			}
+		}
+		&__video-small-wrapper{
+			height: 82px;
+		}
+	}
+}
