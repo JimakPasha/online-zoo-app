@@ -2,21 +2,65 @@
 
 const coverElem = document.getElementById('cover');
 const donateBtn = document.getElementById('btn-donate');
+const feedbackBtn = document.getElementById('btn-feedback');
 const formAnimal = document.getElementById('form-animal');
 const formDonat = document.getElementById('form-donat');
+const formFeedback = document.getElementById('form-feedback');
 const closeBtnAnimal = document.getElementById('close-btn-animal');
 const closeBtnDonat = document.getElementById('close-btn-donat');
-const nextBtnForm = document.getElementById('modal-animal__btn');
-const donateBtnForm = document.getElementById('modal-donat__btn');
+const closeBtnFeedback = document.getElementById('close-btn-feedback');
 const mapImage = document.getElementById('map');
 const wrapperMap = document.getElementsByClassName('map');
 const infoAnimalBtnsBox = document.querySelectorAll('.animal-info__bottom-item');
+const formDonate1 = document.getElementById('formDonate1');
+const formDonate2 = document.getElementById('formDonate2');
+const formDonate3 = document.getElementById('formDonate3');
+const carouselList = document.querySelector('.about__images-list');
+const carouselItems = document.querySelectorAll('.about__images-item');
+const elems = Array.from(carouselItems);
 
 
 
+// карусель на главной
+carouselList.addEventListener('click', function (event) {
+	let newActive = event.target.closest('.about__images-item');
+
+	if (!newActive) {
+		return;
+	} else {
+		update(newActive);
+	}
+
+});
+
+const update = function (newActive) {
+	const newActivePos = newActive.dataset.pos;
+
+	const current = elems.find((elem) => elem.dataset.pos == 0);
+	const prev = elems.find((elem) => elem.dataset.pos == -1);
+	const next = elems.find((elem) => elem.dataset.pos == 1);
+	const first = elems.find((elem) => elem.dataset.pos == -2);
+	const last = elems.find((elem) => elem.dataset.pos == 2);
 
 
+	[current, prev, next, first, last].forEach(item => {
+		var itemPos = item.dataset.pos;
 
+		item.dataset.pos = getPos(itemPos, newActivePos)
+	});
+};
+
+const getPos = function (current, active) {
+	const diff = current - active;
+
+	if (Math.abs(current - active) > 2) {
+		return -current
+	}
+
+	return diff;
+}
+
+//спойлер информации
 infoAnimalBtnsBox.forEach(item => {
 	item.addEventListener('click', function () {
 		item.classList.toggle('active');
@@ -27,9 +71,12 @@ infoAnimalBtnsBox.forEach(item => {
 	});
 });
 
-
-
-
+//modal feedback, donat
+feedbackBtn.addEventListener('click', () => {
+	document.body.classList.add('notScroll');
+	coverElem.classList.remove('hidden');
+	formFeedback.classList.remove('hidden');
+});
 
 donateBtn.addEventListener('click', () => {
 	document.body.classList.add('notScroll');
@@ -42,6 +89,7 @@ coverElem.addEventListener('click', () => {
 	coverElem.classList.add('hidden');
 	formAnimal.classList.add('hidden');
 	formDonat.classList.add('hidden');
+	formFeedback.classList.add('hidden');
 });
 
 closeBtnAnimal.addEventListener('click', () => {
@@ -57,23 +105,39 @@ closeBtnDonat.addEventListener('click', () => {
 	formDonat.classList.add('hidden');
 });
 
-nextBtnForm.addEventListener('click', (e) => {
-	e.preventDefault();
-		formAnimal.classList.add('hidden');
-		formDonat.classList.remove('hidden');
+closeBtnFeedback.addEventListener('click', () => {
+	document.body.classList.remove('notScroll');
+	coverElem.classList.add('hidden');
+	formFeedback.classList.add('hidden');
 });
 
 
-donateBtnForm.addEventListener('click', (e) => {
+formDonate1.addEventListener('submit', (e) => {
+	e.preventDefault();
+	formAnimal.classList.add('hidden');
+	formDonat.classList.remove('hidden');
+});
+
+formDonate2.addEventListener('submit', (e) => {
 	e.preventDefault();
 	document.body.classList.remove('notScroll');
 	coverElem.classList.add('hidden');
 	formDonat.classList.add('hidden');
 	alert('Thank you for your donation');
+	formDonate2.reset();
+});
+
+formDonate3.addEventListener('submit', (e) => {
+	e.preventDefault();
+	document.body.classList.remove('notScroll');
+	coverElem.classList.add('hidden');
+	formFeedback.classList.add('hidden');
+	alert('Thank you! Your feedback will be added!');
+	formDonate3.reset();
 });
 
 
-
+//burger menu
 const menuBtn = document.querySelector('.menu__btn');
 if(menuBtn) {
 	const menuList = document.querySelector('.menu__list');
@@ -84,6 +148,17 @@ if(menuBtn) {
 	});
 }
 
+//animal menu in zoospages
+const menuZoosBtn = document.querySelector('.animal__aside-btn');
+if (menuZoosBtn) {
+	const menuAside = document.querySelector('.aside');
+	menuZoosBtn.addEventListener('click', function(e) {
+		this.classList.toggle('active');
+		menuAside.classList.toggle('active');
+	});
+}
+
+// функция проверки максимальной длины введёного значения
 function maxLengthCheck(object) {
 	if (object.value.length > object.maxLength) {
 		object.value = object.value.slice(0, object.maxLength)
